@@ -2,3 +2,5 @@
 	email = vpervouchine@gmail.com
 [uesr]
 	name = Vladimir Pervouchine
+[push]
+	default = simple
