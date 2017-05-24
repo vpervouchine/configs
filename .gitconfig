@@ -4,3 +4,10 @@
 	name = Vladimir Pervouchine
 [push]
 	default = simple
+[alias]
+	co = checkout
+	br = branch
+	st = status
+	unstage = reset HEAD --
+[diff]
+	tool = vimdiff
