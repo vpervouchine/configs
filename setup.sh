@@ -22,3 +22,4 @@ install_file $HOME .bashrc
 install_file $HOME .profile
 install_file $HOME .gitconfig
 install_file $HOME .gdbinit
+install_file $HOME .tmux.conf
