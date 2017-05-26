@@ -21,3 +21,4 @@ function install_file {
 install_file $HOME .bashrc
 install_file $HOME .profile
 install_file $HOME .gitconfig
+install_file $HOME .gdbinit
