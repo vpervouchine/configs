@@ -1,6 +1,5 @@
 [user]
 	email = vpervouchine@gmail.com
-[uesr]
 	name = Vladimir Pervouchine
 [push]
 	default = simple
@@ -11,3 +10,10 @@
 	unstage = reset HEAD --
 [diff]
 	tool = vimdiff
+[core]
+	editor = vim
+[pull]
+	rebase = true
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
