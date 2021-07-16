@@ -2,8 +2,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-export TERM=screen-256color
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -130,5 +128,28 @@ function color_my_prompt {
 }
 color_my_prompt
 
-# added by Miniconda2 4.3.14 installer
-export PATH="/home/ubuntu/miniconda2/bin:$PATH"
+set -o vi
+
+source <(kitty + complete setup bash)
+
+export PATH=${HOME}/.local/kitty.app/bin:${PATH}
+
+alias vi=${HOME}/nvim.appimage
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/vpervouchine/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/vpervouchine/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/vpervouchine/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/vpervouchine/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
